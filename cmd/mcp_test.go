@@ -13,7 +13,7 @@ import (
 	mcp "github.com/metoro-io/mcp-golang"
 	"github.com/metoro-io/mcp-golang/transport/stdio"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/mcpserver"
+	"github.com/alejandro-sg/n8nctl/internal/mcpserver"
 )
 
 func TestMCPWorkflowDeployDryRunDoesNotMutate(t *testing.T) {

@@ -1,4 +1,4 @@
-module github.com/LogicMonitor-IT/n8nctl
+module github.com/alejandro-sg/n8nctl
 
 go 1.26
 

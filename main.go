@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/LogicMonitor-IT/n8nctl/cmd"
+	"github.com/alejandro-sg/n8nctl/cmd"
 )
 
 func main() {

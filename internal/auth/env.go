@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/config"
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/config"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
 )
 
 func ResolveAPIKey(getenv func(string) string, envName string, env config.Environment) (string, error) {

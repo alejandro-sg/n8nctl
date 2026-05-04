@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/viper"
 
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
 )
 
 const FileName = ".n8nctl.yaml"

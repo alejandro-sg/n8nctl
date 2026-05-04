@@ -3,7 +3,7 @@ package workflow
 import (
 	"encoding/json"
 
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 func PrepareForWrite(workflow n8n.Workflow) n8n.Workflow {

@@ -9,10 +9,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/api"
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
-	"github.com/LogicMonitor-IT/n8nctl/internal/output"
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/internal/api"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/output"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 func newExecutionCmd(a *app) *cobra.Command {
@@ -80,21 +80,22 @@ func newExecutionListCmd(a *app) *cobra.Command {
 			}
 			sortExecutions(executions)
 
-			workflowNames := make(map[string]string)
+			workflowNames := make(map[string]string, len(executions))
+			fetched := make(map[string]bool, len(executions))
 			if workflowID != "" {
 				workflowNames[workflowID] = workflowName
+				fetched[workflowID] = true
 			}
 			for _, execution := range executions {
 				id := execution.WorkflowID.String()
-				if id == "" || workflowNames[id] != "" {
+				if id == "" || fetched[id] {
 					continue
 				}
+				fetched[id] = true
 				workflow, err := envCtx.Client.GetWorkflow(cmd.Context(), id, true)
 				if err == nil {
 					workflowNames[id] = workflow.Name
-					continue
 				}
-				workflowNames[id] = ""
 			}
 
 			type executionRow struct {

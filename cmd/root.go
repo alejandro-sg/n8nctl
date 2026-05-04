@@ -16,14 +16,14 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/api"
-	"github.com/LogicMonitor-IT/n8nctl/internal/auth"
-	"github.com/LogicMonitor-IT/n8nctl/internal/config"
-	credentiallint "github.com/LogicMonitor-IT/n8nctl/internal/credential"
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
-	"github.com/LogicMonitor-IT/n8nctl/internal/output"
-	workflowutil "github.com/LogicMonitor-IT/n8nctl/internal/workflow"
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/internal/api"
+	"github.com/alejandro-sg/n8nctl/internal/auth"
+	"github.com/alejandro-sg/n8nctl/internal/config"
+	credentiallint "github.com/alejandro-sg/n8nctl/internal/credential"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/output"
+	workflowutil "github.com/alejandro-sg/n8nctl/internal/workflow"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 type Streams struct {
@@ -761,7 +761,6 @@ func (a *app) backupWorkflowWithOptions(envCtx *environmentContext, workflow *n8
 		})
 	}
 	defer file.Close()
-	_ = file.Chmod(0o600)
 	if _, err := file.Write(payload); err != nil {
 		return "", clierrors.Wrap(err, clierrors.ExitInternal, clierrors.CodeInternalFailure, "failed to write workflow backup", map[string]any{
 			"path": backupPath,
