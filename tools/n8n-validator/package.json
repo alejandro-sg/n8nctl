@@ -1,0 +1,12 @@
+{
+  "name": "n8nctl-validator",
+  "private": true,
+  "version": "0.1.0",
+  "description": "n8nctl validation sidecar placeholder pinned to the n8n runtime version used by the CLI.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "n8n": "2.17.5"
+  }
+}

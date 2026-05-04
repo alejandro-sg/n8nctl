@@ -1,0 +1,16 @@
+.DS_Store
+
+# Local operator config and secrets
+.n8nctl.yaml
+.env.1password
+.n8nctl/
+
+# Build/test artifacts
+.cache/
+dist/
+coverage.out
+n8nctl
+
+# Editor files
+.idea/
+.vscode/

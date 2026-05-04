@@ -1,0 +1,33 @@
+default_env: dev
+
+environments:
+  dev:
+    base_url: https://company-dev.app.n8n.cloud
+    api_key_env: N8N_DEV_API_KEY
+    api_key_env_aliases:
+      - TEAM_N8N_DEV_API_KEY
+    default_project: Development
+
+  prod:
+    base_url: https://company.app.n8n.cloud
+    api_key_env: N8N_PROD_API_KEY
+    default_project: Production
+
+workflows:
+  path: workflows
+  name_strategy: file_or_json_name
+
+validation:
+  engine: n8n-runtime
+  n8n_version: 2.17.5
+  require_remote_context: false
+  credential_preflight: ""
+
+secrets:
+  loader: none
+  onepassword_env_file: .env.1password
+
+safety:
+  require_confirm_for_prod: true
+  backup_before_update: true
+  deploy_inactive_by_default: true

@@ -1,0 +1,25 @@
+{
+  "name": "Broken Workflow",
+  "active": true,
+  "nodes": [
+    {
+      "name": "Duplicate",
+      "type": "n8n-nodes-base.webhook",
+      "parameters": {
+        "apiKey": "supersecret123",
+        "target": "https://company-prod.app.n8n.cloud/webhook/notify"
+      },
+      "credentials": {
+        "slackApi": {}
+      }
+    },
+    {
+      "name": "Duplicate",
+      "type": "n8n-nodes-base.slack",
+      "parameters": {
+        "text": "{{ malformed"
+      }
+    }
+  ],
+  "connections": null
+}

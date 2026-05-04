@@ -1,0 +1,45 @@
+{
+  "n8nVersion": "2.17.5",
+  "nodes": {
+    "n8n-nodes-base.httpRequest": {
+      "requiredParameters": [
+        {
+          "path": "url",
+          "label": "URL"
+        }
+      ],
+      "authChecks": {
+        "googleCredentialMode": true
+      }
+    },
+    "n8n-nodes-base.googleDrive": {
+      "anyCredential": {
+        "keys": [
+          "googleDriveOAuth2Api",
+          "googleApi"
+        ],
+        "label": "googleDriveOAuth2Api or googleApi",
+        "remediation": "Bind a Google Drive OAuth2 credential or Google Service Account API credential that has the file/folder scopes the operation needs."
+      }
+    },
+    "n8n-nodes-base.googleSheets": {
+      "anyCredential": {
+        "keys": [
+          "googleSheetsOAuth2Api",
+          "googleApi"
+        ],
+        "label": "googleSheetsOAuth2Api or googleApi",
+        "remediation": "Bind a Google Sheets OAuth2 credential or Google Service Account API credential with spreadsheet access."
+      }
+    },
+    "n8n-nodes-base.gmail": {
+      "credential": {
+        "key": "gmailOAuth2",
+        "remediation": "Bind a Gmail OAuth2 credential with the Gmail scopes required by the selected operation."
+      }
+    },
+    "n8n-nodes-base.executeWorkflow": {
+      "subworkflow": true
+    }
+  }
+}

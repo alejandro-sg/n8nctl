@@ -1,0 +1,54 @@
+{
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Slack",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "name": "Slack Alert",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Webhook",
+      "parameters": {
+        "path": "slack-alert"
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1
+    },
+    {
+      "credentials": {
+        "slackApi": {
+          "id": "cred-1",
+          "name": "Slack API"
+        }
+      },
+      "id": "node-2",
+      "name": "Slack",
+      "parameters": {
+        "channel": "ops",
+        "text": "={{ $json.message }}"
+      },
+      "position": [
+        240,
+        0
+      ],
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1
+    }
+  ],
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

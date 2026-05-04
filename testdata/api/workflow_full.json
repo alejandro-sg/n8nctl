@@ -1,0 +1,29 @@
+{
+  "id": "wf-fixture",
+  "projectId": "proj-fixture",
+  "name": "Fixture Workflow",
+  "active": true,
+  "versionId": "server-version",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "parameters": {}
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "lastId": 42
+  },
+  "pinData": {
+    "Webhook": []
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
+}
