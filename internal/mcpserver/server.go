@@ -19,7 +19,7 @@ import (
 	"github.com/metoro-io/mcp-golang/transport"
 	"github.com/metoro-io/mcp-golang/transport/stdio"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/config"
+	"github.com/alejandro-sg/n8nctl/internal/config"
 )
 
 type CLIResult struct {
@@ -826,7 +826,6 @@ func (s *Server) writeAudit(inv invocation, result ToolResult) error {
 		return err
 	}
 	defer file.Close()
-	_ = file.Chmod(0o600)
 	if _, err := file.Write(append(payload, '\n')); err != nil {
 		return err
 	}

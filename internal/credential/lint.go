@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/workflow"
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/internal/workflow"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 type LintOptions struct {

@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 var (
@@ -106,7 +106,7 @@ func Validate(workflow n8n.Workflow, opts ValidationOptions) ValidationResult {
 	if result.WorkflowName == "" {
 		result.addError("missing_name", "workflow is missing a non-empty name", "name")
 	}
-	if workflow.Nodes == nil || len(workflow.Nodes) == 0 {
+	if len(workflow.Nodes) == 0 {
 		result.addError("missing_nodes", "workflow must include at least one node", "nodes")
 	}
 	if workflow.Connections == nil {
@@ -155,7 +155,9 @@ func Validate(workflow n8n.Workflow, opts ValidationOptions) ValidationResult {
 	}
 
 	generic, err := ToGenericMap(workflow)
-	if err == nil {
+	if err != nil {
+		result.addWarning("internal_normalization_error", fmt.Sprintf("workflow could not be converted for deep inspection: %v", err), "")
+	} else {
 		walkValues(generic, "", func(path string, key string, value string) {
 			lowerKey := strings.ToLower(key)
 			if malformedTemplate(value) {

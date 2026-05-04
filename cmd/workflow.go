@@ -10,11 +10,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/api"
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
-	"github.com/LogicMonitor-IT/n8nctl/internal/output"
-	workflowutil "github.com/LogicMonitor-IT/n8nctl/internal/workflow"
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/internal/api"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/output"
+	workflowutil "github.com/alejandro-sg/n8nctl/internal/workflow"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 func newWorkflowCmd(a *app) *cobra.Command {

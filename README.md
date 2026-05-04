@@ -455,8 +455,8 @@ If the chosen directory is not on `PATH`, the script prints the exact export com
 You can override the GitHub repository, Go module path, and install target:
 
 ```bash
-N8NCTL_REPO=LogicMonitor-IT/n8nctl \
-N8NCTL_MODULE=github.com/LogicMonitor-IT/n8nctl \
+N8NCTL_REPO=alejandro-sg/n8nctl \
+N8NCTL_MODULE=github.com/alejandro-sg/n8nctl \
 N8NCTL_INSTALL_DIR="$HOME/bin" \
 ./scripts/install.sh
 ```

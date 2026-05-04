@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 func Dependencies(workflow n8n.Workflow) []n8n.WorkflowDependency {

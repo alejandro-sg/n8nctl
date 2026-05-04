@@ -4,8 +4,8 @@ set -euo pipefail
 # Make common package-manager binary locations visible in stripped shells.
 PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 
-repo="${N8NCTL_REPO:-LogicMonitor-IT/n8nctl}"
-module_path="${N8NCTL_MODULE:-github.com/LogicMonitor-IT/n8nctl}"
+repo="${N8NCTL_REPO:-alejandro-sg/n8nctl}"
+module_path="${N8NCTL_MODULE:-github.com/alejandro-sg/n8nctl}"
 requested_version="latest"
 setup_path="false"
 install_dir="${N8NCTL_INSTALL_DIR:-}"

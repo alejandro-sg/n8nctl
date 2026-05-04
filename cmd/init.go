@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/config"
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/config"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
 )
 
 func newInitCmd(a *app) *cobra.Command {

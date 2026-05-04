@@ -10,8 +10,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	clierrors "github.com/LogicMonitor-IT/n8nctl/internal/errors"
-	"github.com/LogicMonitor-IT/n8nctl/internal/output"
+	clierrors "github.com/alejandro-sg/n8nctl/internal/errors"
+	"github.com/alejandro-sg/n8nctl/internal/output"
 )
 
 func newEnvCmd(a *app) *cobra.Command {

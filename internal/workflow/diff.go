@@ -7,7 +7,7 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/LogicMonitor-IT/n8nctl/pkg/n8n"
+	"github.com/alejandro-sg/n8nctl/pkg/n8n"
 )
 
 type DiffResult struct {

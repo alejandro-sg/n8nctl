@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/buildinfo"
+	"github.com/alejandro-sg/n8nctl/internal/buildinfo"
 )
 
 func newVersionCmd(a *app) *cobra.Command {

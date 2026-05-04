@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/LogicMonitor-IT/n8nctl/internal/buildinfo"
-	"github.com/LogicMonitor-IT/n8nctl/internal/mcpserver"
+	"github.com/alejandro-sg/n8nctl/internal/buildinfo"
+	"github.com/alejandro-sg/n8nctl/internal/mcpserver"
 )
 
 func newMCPCmd(a *app) *cobra.Command {
